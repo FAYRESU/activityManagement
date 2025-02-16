@@ -101,43 +101,32 @@ export class Activity {
     }
 
     public createActivity(): void {
-        // ฟังก์ชันนี้สามารถใช้ในการสร้างกิจกรรมใหม่
         console.log("Activity created:", this.activityname);
-        // เพิ่มการบันทึกกิจกรรมลงในระบบ เช่น เพิ่มข้อมูลในฐานข้อมูล หรืออัพเดทสถานะ
     }
     
     public updateActivity(): void {
-        // ฟังก์ชันนี้จะใช้ในการอัปเดตข้อมูลกิจกรรม
         console.log("Activity updated:", this.activityname);
-        // ตัวอย่างเช่น สามารถอัปเดตชื่อกิจกรรม, ผู้จัด, หรือจำนวนผู้เข้าร่วมได้
     }
     
     public publishActivity(): void {
-        // ฟังก์ชันนี้จะใช้ในการเผยแพร่กิจกรรม
         this.status = "Published";
         console.log("Activity published:", this.activityname);
-        // อาจจะทำการเปลี่ยนสถานะกิจกรรมเป็น "เผยแพร่"
     }
     
     public deleteActivity(): void {
-        // ฟังก์ชันนี้จะใช้ในการลบกิจกรรม
         console.log("Activity deleted:", this.activityname);
-        // อาจจะทำการลบกิจกรรมจากระบบหรือฐานข้อมูล
     }
     
     public approveParticipant(participants: Participant[]): void {
-        // ฟังก์ชันนี้จะใช้ในการอนุมัติผู้เข้าร่วมกิจกรรม
         participants.forEach((participant) => {
             console.log(`Participant ${participant.getName()} approved.`);
-            // อาจจะมีการตั้งสถานะของผู้เข้าร่วมกิจกรรมเป็น "approved" หรือบันทึกการอนุมัติ
+            
         });
     }
     
     public generateCertificate(): void {
-        // ฟังก์ชันนี้จะใช้ในการสร้างใบรับรอง
         if (this.certificateissued) {
-            console.log("Certificate generated for activity:", this.activityname);
-            // สามารถสร้างใบรับรอง เช่น การพิมพ์ใบรับรอง PDF หรือส่งออกข้อมูลใบรับรอง
+            console.log("Certificate generated for activity:", this.activityname)
         } else {
             console.log("No certificate issued for this activity.");
         }
